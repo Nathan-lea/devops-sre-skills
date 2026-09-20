@@ -20,7 +20,7 @@ export PG_HOST=127.0.0.1
 export PG_USER=backup
 export PG_PASS=<via-vault>
 export BACKUP_MODE=logical   # logical | physical
-export BACKUP_BASE=/data/backup/postgresql
+export BACKUP_BASE=/srv/backup/postgresql
 export S3_BUCKET=s3://db-backup/postgresql
 # 按 SKILL.md 步骤执行验证
 ```

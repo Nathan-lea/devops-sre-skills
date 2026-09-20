@@ -43,7 +43,7 @@ echo "BACKUP_USER=${BACKUP_USER:-backup}"
 echo "BACKUP_PASS=${BACKUP_PASS:-<需设置环境变量>}"
 echo "MYSQL_HOST=${MYSQL_HOST:-127.0.0.1}"
 echo "MYSQL_PORT=${MYSQL_PORT:-3306}"
-echo "BACKUP_BASE=${BACKUP_BASE:-/data/backup/mysql}"
+echo "BACKUP_BASE=${BACKUP_BASE:-/srv/backup/mysql}"
 echo "S3_BUCKET=${S3_BUCKET:-s3://db-backup/mysql}"
 ```
 
@@ -54,7 +54,7 @@ echo "S3_BUCKET=${S3_BUCKET:-s3://db-backup/mysql}"
 ### 步骤 1 - 本地备份文件检查
 
 ```bash
-BACKUP_BASE="${BACKUP_BASE:-/data/backup/mysql}"
+BACKUP_BASE="${BACKUP_BASE:-/srv/backup/mysql}"
 HOSTNAME=$(hostname)
 DATE=$(date +%Y%m%d)
 BACKUP_DIR="$BACKUP_BASE/$HOSTNAME/$DATE"

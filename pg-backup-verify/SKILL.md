@@ -46,7 +46,7 @@ echo "PG_PORT=${PG_PORT:-5432}"
 echo "PG_USER=${PG_USER:-backup}"
 echo "PG_PASS=${PG_PASS:-<需设置环境变量>}"
 echo "BACKUP_MODE=${BACKUP_MODE:-logical}"
-echo "BACKUP_BASE=${BACKUP_BASE:-/data/backup/postgresql}"
+echo "BACKUP_BASE=${BACKUP_BASE:-/srv/backup/postgresql}"
 echo "S3_BUCKET=${S3_BUCKET:-s3://db-backup/postgresql}"
 ```
 
@@ -58,7 +58,7 @@ echo "S3_BUCKET=${S3_BUCKET:-s3://db-backup/postgresql}"
 
 ```bash
 export PGPASSWORD="${PG_PASS}"
-BACKUP_BASE="${BACKUP_BASE:-/data/backup/postgresql}"
+BACKUP_BASE="${BACKUP_BASE:-/srv/backup/postgresql}"
 HOSTNAME=$(hostname)
 DATE=$(date +%Y%m%d)
 BACKUP_DIR="$BACKUP_BASE/$HOSTNAME/$DATE"

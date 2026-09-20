@@ -16,7 +16,7 @@
 ## 使用方式
 
 ```bash
-export BACKUP_BASE=/data/backup/mysql
+export BACKUP_BASE=/srv/backup/mysql
 export MYSQL_HOST=127.0.0.1
 export BACKUP_USER=backup
 export BACKUP_PASS=<via-vault>
